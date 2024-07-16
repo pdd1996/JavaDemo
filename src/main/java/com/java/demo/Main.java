@@ -15,7 +15,7 @@ public class Main {
 //        user.myPublicMethod();
 
         Class<?> aClass = Class.forName("com.java.demo.reflection.User");
-        Field[] fields = aClass.getFields();
+        Field[] fields = aClass.getSuperclass().getDeclaredFields();
         for (Field field : fields) {
             System.out.println(field);
         }
