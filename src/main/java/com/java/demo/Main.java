@@ -1,23 +1,15 @@
 package com.java.demo;
 
-import com.java.demo.reflection.User;
+import com.java.demo.stream.Person;
 
-import java.lang.reflect.Field;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException {
-//        int field = User.publicStaticField;
-//        System.out.println(field);
-//        User.myPublicStaticMethod();
-
-//        User user = new User("paddy", 18);
-//        System.out.println("name: " + user.getName() + ", age: " + user.getAge());
-//        user.myPublicMethod();
-
-        Class<?> aClass = Class.forName("com.java.demo.reflection.User");
-        Field[] fields = aClass.getSuperclass().getDeclaredFields();
-        for (Field field : fields) {
-            System.out.println(field);
-        }
+    public static void main(String[] args) {
+        List<Person> people = List.of(
+                new Person("John", 20),
+                new Person("Jane", 21)
+        );
+        System.out.println("Hello World!");
     }
 }
